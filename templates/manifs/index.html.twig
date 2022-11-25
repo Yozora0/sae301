@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ManifsController!{% endblock %}
+{% block title %}Evenements{% endblock %}
 
 {% block body %}
 <style>
@@ -15,9 +15,10 @@
             <img src="{{ asset("img/#{Manifs.getAffiche()}") }}" alt="{{Manifs.getTitre}}"/>
         <div class="textcard">
             <span class="datemanif">{{ Manifs.getDate() | date('d-m-Y') }}</span>
-            <span class="titremanif">{{ Manifs.titre }}</span>
-            <span class="prixmanif">{{ Manifs.getGenre() }}</span>
+            <span class="titremanif">{{ Manifs.getTitre() }}</span>
+            <span class="prixmanif">{{ Manifs.getTarif() }}</span>
             <span class="lieumanif">{{ Manifs.getLieu() }}</span>
+            <div class="genre">{{ Manifs.getGenre() }}</div>
         </div>
             <a class="bouton" href="{{ path('manifs_show', {'id': Manifs.id}) }}">Je réserve</a>
         </div>

@@ -23,11 +23,11 @@ class ManifsController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'manifs_show', methods: ['GET'])]
-    public function show(ManifsRepository $ManifsRepository): Response
+    #[Route('/manifs/{id}', name: 'manifs_show', methods: ['GET'])]
+    public function show(Manifs $manifs): Response
     {
         return $this->render('manifs/show.html.twig', [
-            'manifs_repository' => $ManifsRepository ,
+            'manifs' => $manifs ,
         ]);
     }
 
