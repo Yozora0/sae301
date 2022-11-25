@@ -1,24 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Evenements{% endblock %}
+{% block title %}Paris ticket - Evenements{% endblock %}
 
 {% block body %}
-<style>
-
-</style>
 
     <h1>Liste des évènements</h1>
     <div class="cardlist">
 
         {% for Manifs in manifs %}
         <div class="card">
+            <div class="genre">{{ Manifs.getGenre() }}</div>
             <img src="{{ asset("img/#{Manifs.getAffiche()}") }}" alt="{{Manifs.getTitre}}"/>
         <div class="textcard">
-            <span class="datemanif">{{ Manifs.getDate() | date('d-m-Y') }}</span>
             <span class="titremanif">{{ Manifs.getTitre() }}</span>
             <span class="prixmanif">{{ Manifs.getTarif() }}</span>
-            <span class="lieumanif">{{ Manifs.getLieu() }}</span>
-            <div class="genre">{{ Manifs.getGenre() }}</div>
         </div>
             <a class="bouton" href="{{ path('manifs_show', {'id': Manifs.id}) }}">Je réserve</a>
         </div>

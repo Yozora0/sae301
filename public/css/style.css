@@ -1,12 +1,115 @@
-.card{
+*{
+    font-family: Montserrat;
+}
+
+/*CSS ACCUEIL*/
+.fondnoir{
+    height: 200px;
+    background-color: #1C1C1C;
+}
+
+
+.box{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 150px;
+    color: white;
+}
+
+
+.box-search{
+    display: flex;
+    box-shadow: 0px 6px 7px 3px #9c9c9c52;
+    width: 600px;
+    height: 250px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+}
+
+.search input{
+    height: 50px;
+    width: 250px;
+    border: #FFCC04 2px solid;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+::placeholder {
+    font-style: italic;
+    color: #9C9C9C;
+    text-align: center;
+}
+
+.meilleures h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ventessemaine{
+    justify-content: center;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 30px;
+}
+.ventessemaine img{
+    width: 250px;
+}
+
+.meilleures{
+    position: relative;
+    bottom: 40px ;
+    height: 80vh;
+}
+
+.fondnoir2{
+    height: 400px;
+    background-color: #1C1C1C;
+}
+
+.fondnoir2 h1{
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.propose{
+    position: relative;
+    top: 60px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 50px;
+
+}
+
+.boxpropose{
+    font-weight: bold;
+    font-size: 30px;
     display: flex;
     align-items: center;
-    width: 900px;
-    height: 200px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 8px 10px 2px #9c9c9c3c;
-    border-radius: 30px;
+    width: 300px;
+    justify-content: center;
+    height: 150px;
+    background-image: radial-gradient(circle, #ffcc04, #ffd800, #ffe500, #fff100, #fffe00);
+    border-radius: 20px;
 }
+
+
+.incontournables{
+    height: 60vh;
+}
+
+.incontournables h3{
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+
+/*CSS DES EVENEMENT*/
 
 .cardlist{
     display: flex;
@@ -15,28 +118,44 @@
     justify-content: center;
     padding-top: 30px;
     padding: 20px;
+    font-family: Montserrat;
+
+}
+
+.card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    height: 420px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 10px 2px #9c9c9c3c;
+    border-radius: 30px;
+    font-family: Montserrat;
+
 }
 
 .card img{
-    width: 120px;
-    padding-left: 30px;
+    height: 180px;
+    width: 130px;
+    padding-top: 30px;
 }
 
 .textcard{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
     padding-left: 10px;
 }
 
 .titremanif{
+    padding-top: 10px;
+    height: 40px;
     font-weight: bold;
     font-size: 20px;
     text-transform: uppercase;
-}
-
-.lieumanif{
-    font-size: 15px;
 }
 
 .prixmanif{
@@ -47,11 +166,11 @@
     left: 8px;
     text-align: center;
     position: relative;
-    width: 142px;
-    top: 66px;
+    width: 100px;
+    top: 20px;
     background-color: rgb(255, 255, 255);
     height: 20px;
-    padding: 1px;
+    padding: 10px;
     border-radius: 20px;
     text-decoration: none;
     border: black solid 1px;
@@ -65,6 +184,8 @@
 }
 
 .genre{
+    position: relative;
+    top: 15px;
     background-color: #FFCC04;
     width: 115px;
     justify-content: center;
@@ -73,8 +194,7 @@
     align-items: center;
     border-radius: 18px;
     position: relative;
-    top: -70px;
-    left: 416px;
+
 }
 
 @media (max-width: 710px) {
