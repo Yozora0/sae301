@@ -1,0 +1,76 @@
+.card{
+    display: flex;
+    align-items: center;
+    width: 900px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 10px 2px #9c9c9c3c;
+    border-radius: 30px;
+}
+
+.cardlist{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 30px;
+    padding: 20px;
+}
+
+.card img{
+    width: 120px;
+    padding-left: 30px;
+}
+
+.textcard{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 10px;
+}
+
+.titremanif{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.lieumanif{
+    font-size: 15px;
+}
+
+.prixmanif{
+    font-weight: bold;
+}
+
+.bouton{
+    left: 50px;
+    text-align: center;
+    position: relative;
+    width: 100px;
+    top: 70px;
+    background-color: rgb(255, 255, 255);
+    height: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: black solid 1px;
+    font-weight: bold;
+    color: black;
+}
+
+.bouton:hover{
+    background-color: #FFCC04;
+    transition: 0.3s ;
+}
+
+@media (min-width: 414px) {
+    .card{
+        height: 250px;
+    }
+
+    .bouton{
+        left:-25px;
+        width: 200px;
+    }
+}

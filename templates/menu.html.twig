@@ -8,7 +8,9 @@
 
 {% if app.user %}
     <a href="logout">Deconnexion</a>
-    Bienvenue {{ app.user.userIdentifier }}
+    <a href="commandes">Mes commandes</a>
+    <a href="compte">Mon compte</a>
+    <a href="panier">Mon panier</a>
 {% else %}
     <a href="login">Connexion</a>
     <a href="register">Inscription</a>

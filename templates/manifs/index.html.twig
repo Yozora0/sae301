@@ -6,15 +6,23 @@
 <style>
 
 </style>
-    <section class="all_manifs">
+
+    <h1>Liste des évènements</h1>
+    <div class="cardlist">
+
         {% for Manifs in manifs %}
-            <div class="manifs">
-                <img src="{{ asset("/img/#{Manifs.getAffiche()}") }}" alt="{{Manifs.getTitre}}"/>
-                <p>{{ Manifs.getDate() | date('d-m-Y') }}</p>
-                <p>{{ Manifs.getTitre() }}</p>
-                <p>{{ Manifs.getGenre() }}</p>
-                <p>{{ Manifs.getLieu() }}</p>
-            </div>
+        <div class="card">
+            <img src="{{ asset("img/#{Manifs.getAffiche()}") }}" alt="{{Manifs.getTitre}}"/>
+        <div class="textcard">
+            <span class="datemanif">{{ Manifs.getDate() | date('d-m-Y') }}</span>
+            <span class="titremanif">{{ Manifs.titre }}</span>
+            <span class="prixmanif">{{ Manifs.getGenre() }}</span>
+            <span class="lieumanif">{{ Manifs.getLieu() }}</span>
+        </div>
+            <a class="bouton" href="{{ path('manifs_show', {'id': Manifs.id}) }}">Je réserve</a>
+        </div>
         {% endfor %}
-    </section>
+
+    </div>
+
 {% endblock %}
