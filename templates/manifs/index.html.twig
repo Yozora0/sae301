@@ -9,13 +9,15 @@
 
         {% for Manifs in manifs %}
         <div class="card">
-            <div class="genre">{{ Manifs.getGenre() }}</div>
             <img src="{{ asset("img/#{Manifs.getAffiche()}") }}" alt="{{Manifs.getTitre}}"/>
         <div class="textcard">
             <span class="titremanif">{{ Manifs.getTitre() }}</span>
             <span class="prixmanif">{{ Manifs.getTarif() }}</span>
         </div>
-            <a class="bouton" href="{{ path('manifs_show', {'id': Manifs.id}) }}">Je réserve</a>
+            <div class="boutons">
+                <div class="genre">{{ Manifs.getGenre() }}</div>
+                <a class="bouton" href="{{ path('manifs_show', {'id': Manifs.id}) }}">voir plus</a>
+            </div>
         </div>
         {% endfor %}
 
