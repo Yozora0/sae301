@@ -339,7 +339,7 @@ header .search {
     justify-content: center;
 }
 
-.bouton {
+.eventsbouton {
     text-align: center;
     width: 100px;
     background-color: rgb(255, 255, 255);
@@ -352,7 +352,7 @@ header .search {
     color: black;
 }
 
-.bouton:hover {
+.eventsbouton:hover {
     background-color: #ffcc04;
     transition: 0.3s;
 }
@@ -373,7 +373,7 @@ header .search {
         height: 250px;
     }
 
-    .bouton{
+    .eventsbouton{
         left:-25px;
         width: 200px;
     }
@@ -382,4 +382,182 @@ header .search {
         width: 150px;
         left: 70px;
     }
+}
+
+/*CSS D'UN SEUL EVENEMENT*/
+
+.fond {
+    position: relative;
+    background-position: 50% 15%;
+    background-size: 100%;
+    filter: brightness(0.2);
+    background-repeat: no-repeat;
+    height: 450px;
+    /*background-image: url("img/manifs.Affiche");*/
+    background-color: #262626;
+}
+
+.genretitre {
+    bottom: 136px;
+    width: 20px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+    left: 772px;
+}
+
+.genre {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #ffcc04;
+    width: 115px;
+    justify-content: center;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+    border: solid 1px black;
+}
+
+.titrefilm {
+    color: white;
+    font-size: 45px;
+    font-weight: bold
+}
+
+.image {
+    height: 30px;
+}
+
+.image img {
+    width: 350px;
+    position: relative;
+    bottom: 500px;
+    left: 300px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 353px 450px;
+    grid-template-rows: 0px;
+    gap: 0px 123px;
+    justify-content: center;
+}
+
+
+.titreinfo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.informations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rea {
+    font-size: 20px;
+    width: 350px;
+}
+
+.date {
+    font-size: 20px;
+    width: 350px;
+}
+
+.lieu {
+    font-size: 20px;
+    width: 360px;
+}
+
+.presentation {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.presentationtitre {
+    font-size: 25px;
+    width: 350px;
+    font-weight: bold;
+}
+
+.presentationtext {
+    width: 400px;
+}
+
+.addbouton {
+    cursor: pointer;
+    padding: 10px 70px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    text-decoration: none;
+    border: black solid 1px;
+    font-weight: bold;
+    color: black;
+}
+
+.addbouton:hover{
+    background-color: #ffcc04;
+    transition: 0.3s;
+}
+
+/*VERSION MOBILE*/
+
+@media (max-width: 700px) {
+
+    .fond {
+        height: 200px;
+
+    }
+
+    .titrefilm {
+        font-size: 25px;
+    }
+
+    .genretitre {
+        left: 221px;
+        bottom: 88px;
+    }
+
+    .image img {
+        width: 200px;
+        bottom: 240px;
+        left: 15px;
+    }
+
+    .container {
+        gap: 20px;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titreinfo {
+        font-size: 20px;
+    }
+
+    .presentationtitre {
+        font-size: 20px;
+    }
+
+    .presentationtext{
+        width: 350px;
+    }
+
+    .rea {
+        font-size: 18px;
+    }
+
+    .lieu {
+        font-size: 18px;
+    }
+
+    .date {
+        font-size: 18px;
+    }
+
 }

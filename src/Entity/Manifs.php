@@ -44,6 +44,13 @@ class Manifs
     #[ORM\Column]
     private ?int $capacite = null;
 
+    #[ORM\ManyToOne(inversedBy: 'manifs')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Salles $salle = null;
+
+    #[ORM\Column]
+    private ?int $salle_id = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -165,6 +172,30 @@ class Manifs
     public function setCapacite(int $capacite): self
     {
         $this->capacite = $capacite;
+
+        return $this;
+    }
+
+    public function getSalle(): ?Salles
+    {
+        return $this->salle;
+    }
+
+    public function setSalle(?Salles $salle): self
+    {
+        $this->salle = $salle;
+
+        return $this;
+    }
+
+    public function getSalleId(): ?int
+    {
+        return $this->salle_id;
+    }
+
+    public function setSalleId(int $salle_id): self
+    {
+        $this->salle_id = $salle_id;
 
         return $this;
     }
