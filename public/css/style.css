@@ -73,7 +73,7 @@ header .search {
 .recherchebox {
     position: absolute;
     right: 100%;
-    width: 100%;
+    width: 85%;
     height: 15%;
     display: flex;
     background: #fff;
