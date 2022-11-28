@@ -14,15 +14,15 @@
 
 
         <li>
-            <a href="accueil">Accueil</a>
+            <a href="{{ path("app_accueil") }}">Accueil</a>
         </li>
         <li>
-            <a href="manifs">Evenements</a>
+            <a href="{{ path("app_manifs") }}">Evenements</a>
         </li>
 
 {% if is_granted('ROLE_ADMIN') %}
     <li>
-    <a href="admin">Admin</a>
+    <a href="{{ path("app_admin") }}">Admin</a>
     </li>
 {% endif %}
 
@@ -32,15 +32,15 @@
     <a href="compte">Mon compte</a>
     </li>
     <li>
-    <a href="panier">Mon panier</a>
+    <a href="{{ path("app_panier") }}">Mon panier</a>
     </li>
     {#<a href="logout">Deconnexion</a>#}
 {% else %}
     <li>
-    <a href="login">Connexion</a>
+    <a href="{{ path("app_login") }}">Connexion</a>
     </li>
     <li>
-    <a href="register">Inscription</a>
+    <a href="{{ path("app_register") }}">Inscription</a>
     </li>
 {% endif %}
     </ul>
