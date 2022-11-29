@@ -17,12 +17,13 @@
     <div class="informations">
         <span class="titreinfo">INFORMATIONS :</span>
         <p class="rea">{{ manifs.casting }}</p>
-        <span class="date"><strong>Date : </strong>{{ manifs.date | date('d-m-Y') }} à {{ manifs.horaire | date('HH-mm') }}</span>
+        <span class="date"><strong>Date : </strong>{{ manifs.date | date('d-m-Y') }} à {{ manifs.horaire | date('H:i') }}</span>
         <span class="lieu"><strong>Lieu : </strong>{{ manifs.lieu }}</span>
     </div>
     <div class="presentation">
     <span class="presentationtitre">PRESENTATION :</span>
         <span class="presentationtext">{{ manifs.description }}</span>
+        <span><strong>{{ manifs.tarif }} €</strong></span>
         <a href="#" class="addbouton">Ajouter au panier</a>
     </div>
 </div>

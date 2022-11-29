@@ -29,8 +29,8 @@ class Manifs
     #[ORM\Column(length: 255)]
     private ?string $affiche = null;
 
-    #[ORM\Column(length: 10)]
-    private ?string $tarif = null;
+    #[ORM\Column]
+    private ?int $tarif = null;
 
     #[ORM\Column(length: 150)]
     private ?string $lieu = null;
@@ -116,12 +116,12 @@ class Manifs
         return $this;
     }
 
-    public function getTarif(): ?string
+    public function getTarif(): ?int
     {
         return $this->tarif;
     }
 
-    public function setTarif(string $tarif): self
+    public function setTarif(int $tarif): self
     {
         $this->tarif = $tarif;
 
