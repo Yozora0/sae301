@@ -7,6 +7,11 @@
 <div class="box">
     <h1>Liste des évènements</h1>
 </div>
+
+    {{ form_start(form, {'attr': {'action': path('app_search')} }) }}
+    {{ form_widget(form.search) }}
+    {{ form_end(form) }}
+
     <div class="cardlist">
 
         {% for Manifs in manifs %}
