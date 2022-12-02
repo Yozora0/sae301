@@ -11,12 +11,12 @@
     {% for key in search %}
             <a href="{{ path('manifs_show', {'id': key.getId }) }}"></a>
         <div class="card">
-        <img src="{{ asset('img/' ~ key.getAffiche()) }}" alt="Affiche de '{{ key.getTitre() }}'"/>
+            <div class="genre">{{ key.getGenre() }}</div><br/>
+            <img src="{{ asset('img/' ~ key.getAffiche()) }}" alt="Affiche de '{{ key.getTitre() }}'"/>
             <div class="textcard">
                 <span class="titremanif">{{ key.getTitre() }}</span>
-                <span class="prixmanif">{{ key.getTarif() }}</span>
+                <span class="prixmanif">{{ key.getTarif() }} €</span>
                 <div class="boutons">
-                    <div class="genre">{{ key.getGenre() }}</div>
                     <a class="eventsbouton" href="{{ path('manifs_show', {'id': key.getId}) }}">voir plus</a>
                 </div>
             </div>

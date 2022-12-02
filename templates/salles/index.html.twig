@@ -1,20 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SallesController!{% endblock %}
+{% block title %}Paris ticket - Salles{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="fondnoir"></div>
+    <div class="box">
+        <h1>Liste des salles</h1>
+    </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/sae301/src/Controller/SallesController.php'|file_link(0) }}">src/Controller/SallesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/sae301/templates/salles/index.html.twig'|file_link(0) }}">templates/salles/index.html.twig</a></code></li>
-    </ul>
-</div>
+    <div class="cardlist">
+
+        {% for Salles in salles  %}
+            <div class="card">
+                <img src="{{ asset("img/salles/#{Salles.getImg()}") }}" alt="{{Salles.getNom()}}"/>
+                <div class="textcard">
+                    <span class="titremanif">{{ Salles.getNom() }}</span>
+                    <span class="prixmanif">{{ Salles.getCapacite() }} places</span>
+                </div>
+                <div class="boutons">
+                    <a class="eventsbouton" href="{{ path('salles_show', {'id': Salles.id}) }}">voir plus</a>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
 {% endblock %}

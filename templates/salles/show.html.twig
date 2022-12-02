@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ salles.nom }}{% endblock %}
+
+{% block body %}
+
+    <div class="fond" style="background-image: url({{ asset("img/salles/#{salles.getImg()}") }}")></div>
+    <div class="genretitre">
+        <span class="titrefilm">{{ salles.nom }}</span>
+    </div>
+    </div>
+    <div class="image">
+        <img src="{{ asset("img/salles/#{salles.getImg()}") }}" alt="{{salles.getNom}}"/>
+    </div>
+    <div class="container">
+        <div class="informations">
+            <span class="titreinfo">INFORMATIONS :</span>
+            <p class="rea">{{ salles.capacite }} places</p>
+            <span class="lieu"><strong>Adresse : </strong>{{ salles.adresse }}</span>
+        </div>
+    </div>
+
+{% endblock %}

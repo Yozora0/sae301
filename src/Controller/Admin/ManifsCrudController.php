@@ -33,7 +33,7 @@ class ManifsCrudController extends AbstractCrudController
             TextField::new('genre'),
             TextEditorField::new('casting'),
             ImageField::new('affiche')->setBasePath('img')->setUploadDir('public/img'),
-            TextField::new('tarif'),
+            IntegerField::new('tarif'),
             TextField::new('lieu'),
             DateField::new('date'),
             TimeField::new('horaire'),

@@ -161,12 +161,17 @@ header .search {
     justify-content: center;
 }
 
-.search input{
+.search input {
     height: 50px;
     width: 250px;
     border: #FFCC04 2px solid;
     border-radius: 25px;
     padding: 5px;
+
+}
+
+input#form_search{
+    color: #FFCC04;
 }
 
 ::placeholder {
@@ -261,6 +266,7 @@ header .search {
     width: 300px;
     height: 500px;
     background-color: rgb(255, 255, 255);
+    margin-bottom: 70px;
 }
 
 .card img {
@@ -341,7 +347,7 @@ header .search {
     filter: brightness(0.2);
     background-repeat: no-repeat;
     height: 450px;
-    background-color: black;
+    /*background-color: black;*/
 }
 
 .genretitre {
@@ -440,7 +446,7 @@ header .search {
     width: 400px;
 }
 
-.bouton {
+.addbouton {
     cursor: pointer;
     padding: 10px 70px;
     text-align: center;
@@ -765,6 +771,20 @@ ul {
 
 .logofooter {
     width: 150px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #fff;
+    align-items: center;
+    padding: 0 30px;
+    transition: 0.5s ease-in-out;
+    margin-bottom : 30px;
+
 }
 
 /*responsive*/

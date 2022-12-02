@@ -8,21 +8,28 @@
     <h1>Liste des évènements</h1>
 </div>
 
+
     {{ form_start(form, {'attr': {'action': path('app_search')} }) }}
-    {{ form_widget(form.search) }}
+    {{ form_widget(form.search, {'attr': {'placeholder': 'Recherchez ici'}}) }}
+    <span class="icon">
+	    <ion-icon name="search-outline" class="recherchebtn"></ion-icon>
+</span>
     {{ form_end(form) }}
+
+
+
 
     <div class="cardlist">
 
         {% for Manifs in manifs %}
         <div class="card">
+            <div class="genre">{{ Manifs.getGenre() }}</div></br>
             <img src="{{ asset("img/#{Manifs.getAffiche()}") }}" alt="{{Manifs.getTitre}}"/>
         <div class="textcard">
             <span class="titremanif">{{ Manifs.getTitre() }}</span>
-            <span class="prixmanif">{{ Manifs.getTarif() }}</span>
+            <span class="prixmanif">{{ Manifs.getTarif() }} €</span>
         </div>
             <div class="boutons">
-                <div class="genre">{{ Manifs.getGenre() }}</div>
                 <a class="eventsbouton" href="{{ path('manifs_show', {'id': Manifs.id}) }}">voir plus</a>
             </div>
         </div>

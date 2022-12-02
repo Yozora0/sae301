@@ -4,7 +4,7 @@
 
 {% block body %}
 
-<div class="fond"></div>
+<div class="fond" style="background-image: url({{ asset("img/#{manifs.getAffiche()}") }}")></div>
 <div class="genretitre">
     <span class="titrefilm">{{ manifs.getTitre() }}</span>
     <span class="genre">{{ manifs.genre }}</span>
