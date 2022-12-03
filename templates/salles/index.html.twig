@@ -16,7 +16,7 @@
                 <img src="{{ asset("img/salles/#{Salles.getImg()}") }}" alt="{{Salles.getNom()}}"/>
                 <div class="textcard">
                     <span class="titremanif">{{ Salles.getNom() }}</span>
-                    <span class="prixmanif">{{ Salles.getCapacite() }} places</span>
+                    <span class="prixmanif">{{ Salles.getCapacite() }}</span>
                 </div>
                 <div class="boutons">
                     <a class="eventsbouton" href="{{ path('salles_show', {'id': Salles.id}) }}">voir plus</a>
@@ -25,5 +25,8 @@
         {% endfor %}
 
     </div>
+{% endblock %}
 
+{% block js %}
+    <script type="text/javascript" src="{{ asset('js/general.js') }}"></script>
 {% endblock %}

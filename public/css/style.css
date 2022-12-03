@@ -637,7 +637,7 @@ header .search{
     border-radius: 25px;
 }
 
-.btn:hover{
+.btn:hover, .addbouton:hover{
 
     background-color: #FFCC04;
     transition: 0.3s ;
