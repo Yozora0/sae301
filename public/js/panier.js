@@ -25,24 +25,21 @@ var totalgeneral=0
 montab.forEach(uneinfo => {
 
     let html = `
-    <div class="flex grid">
-        <div class="images-panier">
+<div class="cardlist">
+    <div class="card">
             <img src="../${(uneinfo.affiche)}" alt="affiche de ${uneinfo.titre}">
+        <div class="textcard">
+            <span class="titremanif">${uneinfo.titre}</span>
+            <span class="lieuspan">${uneinfo.lieu}</span>
+            <span class="datemanif">${uneinfo.date}</span>
         </div>
-        <div>
-            <p class="margin-panier">Nom du spectacle : ${uneinfo.titre}</p>
-            <p class="margin-panier">Salle du spectacle : ${uneinfo.lieu}</p>
-            <p class="margin-panier">Date du spectacle : ${uneinfo.date}</p>
+        <div class="cartbtn">
+            <span id="${uneinfo.id}" class="prixmanif">Nombre de place : <button class="moins">-</button><span>${uneinfo.quantite}</span><button class="plus">+</button></span>
+            <span class="prixmanif">tarif : <span class="unitaire">${uneinfo.tarif}</span>€</span>
+            <span class="prixmanif">Total : <span class="tarif">${uneinfo.tarif * uneinfo.quantite}</span>€</span>
         </div>
-        <div>
-            <p id="${uneinfo.id}" class="margin-panier">Nombre de place : <button class="moins">-</button><span>${uneinfo.quantite}</span><button class="plus">+</button></p>
-            <p class="margin-panier">tarif : <span class="unitaire">${uneinfo.tarif}</span>€</p>
-            <p class="margin-panier">Total : <span class="tarif">${uneinfo.tarif * uneinfo.quantite}</span>€</p>
-        </div>
-        <div class="flex-center">
-            <a href=""><span class="material-icons">delete</span></a>
-        </div>
-    </div>`
+    </div>
+</div>`
     document.getElementById('zone').innerHTML += html
     totalgeneral += uneinfo.tarif * uneinfo.quantite
     console.log(totalgeneral)

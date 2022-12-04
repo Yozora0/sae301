@@ -19,12 +19,4 @@ class SallesController extends AbstractController
             'salles' => $salles
         ]);
     }
-
-    #[Route('/salles/{id}', name: 'salles_show', methods: ['GET'])]
-    public function show(Salles $salles): Response
-    {
-        return $this->render('salles/show.html.twig', [
-            'salles' => $salles ,
-        ]);
-    }
 }

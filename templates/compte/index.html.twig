@@ -3,18 +3,21 @@
 {% block title %}Mon compte{% endblock %}
 
 {% block body %}
-    <div id="mon-profil">
-        <div class="flex-space-between margin-profil">
-            <div class="flex">
-                <h2>Mon compte</h2>
-            </div>
-        </div>
-        <div class="">
-            <p class="p-info">Prénom : {{ user.prenom }}</p>
-            <p class="p-info">Nom : {{ user.nom }}</p>
-            <p class="p-info">Email : {{ user.email }}</p>
-            <p class="p-info">Mot de passe : *</p>
+    <div class="fondnoir"></div>
+    <div class="box">
+        <h1>Mon Compte</h1>
+    </div>
+    <div class="compteformbox">
+        <div class="group">
+    <div class="forminside">
+        <p class="labelmail"><strong>Prénom : </strong></p>
+            {{ user.prenom }}
+        <p class="labelmail"><strong>Nom : </strong></p>
+        {{ user.nom }}
+        <p class="labelmail"><strong>Email :</strong></p>
+        {{ user.email }}
         </div>
         <a class="" href="">Mon historique de commande</a>
+        </div>
     </div>
 {% endblock %}

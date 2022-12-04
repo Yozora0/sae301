@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 *{
     font-family: Montserrat;
 }
@@ -244,7 +246,36 @@ input#form_search{
     padding-left: 50px;
     padding-top: 50px;
 }
+.fondnoir {
+    width: 100%;
+    background-color: #1C1C1C;
+    height: 250px;
+}
 
+.fondnoir2 {
+    width: 100%;
+    background-color: #1C1C1C;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.boxcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+}
+
+.meilleuresventes {
+    padding: 35px 35px;
+}
+
+.titreventes {
+    padding-left: 180px;
+    text-decoration: underline;
+    text-decoration-color: #FFCC04;
+    text-underline-offset: 8px;
+}
 
 /*CSS DES EVENEMENT*/
 
@@ -263,15 +294,26 @@ input#form_search{
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 500px;
+    width: 350px;
+    height: 575px;
     background-color: rgb(255, 255, 255);
     margin-bottom: 70px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+button.moins, button.plus {
+    background: none;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .card img {
     height: 250px;
     width: 180px;
+    border-radius: 20px;
 }
 
 .textcard {
@@ -307,6 +349,16 @@ input#form_search{
     justify-content: center;
 }
 
+.cartbtn{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+    justify-content: center;
+}
+
 .eventsbouton {
     text-align: center;
     width: 100px;
@@ -320,7 +372,35 @@ input#form_search{
     color: black;
 }
 
-.eventsbouton:hover {
+.donebouton{
+    text-align: center;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: black solid 1px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+
+}
+
+
+.accueilbouton{
+    text-align: center;
+    width: 165px;
+    background-color: rgb(255, 255, 255);
+    height: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: black solid 1px;
+    font-weight: bold;
+    color: black;
+}
+
+.eventsbouton:hover, .accueilbouton:hover, .donebouton:hover{
     background-color: #ffcc04;
     transition: 0.3s;
 }
@@ -333,6 +413,7 @@ input#form_search{
     display: flex;
     align-items: center;
     border-radius: 18px;
+    margin-top: 10px;
 }
 
 
@@ -469,7 +550,6 @@ input#form_search{
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 8px 10px 2px #9c9c9c3c;
-
 }*/
 
 
@@ -614,6 +694,20 @@ header .search{
     border-radius: 15px;
 }
 
+.payementgroup{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
+    box-shadow: 0px 8px 10px 2px #9c9c9c3c;
+    width: 400px;
+    border-radius: 15px;
+    width: 600px;
+}
+
 .forminside{
     display: flex;
     flex-direction: column;
@@ -682,6 +776,14 @@ input::placeholder, input#registration_form_email::placeholder, input#registrati
     align-items: center;
 }
 
+
+
+.compteformbox, .payementbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .formtitle{
     color: black;
 }
@@ -696,6 +798,87 @@ h1.h3.mb-3.font-weight-normal{
 
 label.required{
     display: none;
+}
+
+/*CSS TUNNEL*/
+.suivicommande {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.champs {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.champsinputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+}
+
+
+.boxinformationsclient {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 21px;
+    box-shadow: 0px 8px 10px 2px #9c9c9c3c;
+    width: 750px;
+    border-radius: 15px;
+}
+
+
+.inputtunnel {
+    width: 250px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid rgba(173, 173, 173, 0.233);
+}
+
+.inputccv {
+    width: 50px;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid rgba(173, 173, 173, 0.233);
+}
+
+
+.inputdate {
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid rgba(173, 173, 173, 0.233);
+}
+
+input:focus {
+    outline: none;
+}
+
+.inputtunnel::placeholder {
+    opacity: .6;
+    color: rgb(173, 173, 173);
+}
+
+.lientext {
+    text-decoration: none;
+    color: #FFCC04;
+    font-weight: 600;
+}
+
+label {
+    width: 275px;
+    font-size: 18px;
+    color: #FFCC04;
+    font-weight: bold;
 }
 
 
@@ -785,6 +968,61 @@ form {
     transition: 0.5s ease-in-out;
     margin-bottom : 30px;
 
+}
+
+/*CSS SALLES*/
+.cardlistlieu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+    padding-top: 30px;
+    padding: 20px;
+}
+
+.cardlieu {
+    display: flex;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    flex-direction: column;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+}
+
+.cardlieu img {
+    width: 300px;
+    height: 200px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.textcardlieu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    width: 250px;
+}
+
+.titrelieu{
+    overflow: hidden;
+    padding-top: 10px;
+    height: auto;
+    width: 300px;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.lieuspan{
+    width: 300px;
+    height: 50px;
+    padding: 3px 3px 3px 3px;
+}
+
+.capaspan{
+    padding: 3px 3px 3px 3px;
 }
 
 /*responsive*/
@@ -951,6 +1189,8 @@ form {
 
     .card {
         height: 250px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
     }
 
     .eventsbouton {
@@ -963,5 +1203,3 @@ form {
         left: 70px;
     }
 }
-
-
